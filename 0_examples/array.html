@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isEven(num){
+            return num%2==0;
+        }
+
+        // We need to perform an operation only on the even numbers.
+        // We need to transform those numbers by multiplying them by 3.
+        // Finally, we need to add the result up from the previous transformation.
+        const arr = [1,2,3,4,5,6,7]; //2,4,6 -> 6,12,18 = 36
+        const oddNumbers = arr.filter(isEven);
+        console.log(oddNumbers)
+        const tripledNumbers = oddNumbers.map((num) => num*3);
+        console.log(tripledNumbers)
+        const sum = tripledNumbers.reduce((total,currentItem) => total + currentItem, 0);
+        console.log(sum)
+
+        //Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+        function camelize(str){
+            words = str.split('-');
+            capitalizedWords = words.map((word, index) => index==0? word : word.at(0).toUpperCase() + word.substring(1));
+            joint=capitalizedWords.join("");
+            return joint.at(0).toLowerCase()+joint.substring(1);
+        }
+
+        console.log(camelize("background-color"));
+        console.log(camelize("list-style-image"));
+        console.log(camelize("-webkit-transition"));
+
+        function filterRange(arr, min, max){
+            return arr.filter((num) => num >= min && num <= max);
+        }
+
+        let numbers = [5, 3, 8, 1];
+        let filtered = filterRange(numbers, 1, 4);
+        console.log(filtered)
+
+        function copySorted(words){
+            return [...words].sort((a,b) => a>b);
+        }
+
+        let unsortedWords = ["HTML", "JavaScript", "CSS"];
+        let sorted = copySorted(unsortedWords);
+        console.log(sorted)
+        console.log(unsortedWords)
+
+        function unique(arr) {
+            result = [];
+            for (const elem of arr){
+                if (!result.includes(elem)) {
+                    result.push(elem);
+                }
+            }
+            return result;
+        }
+
+        let strings = ["Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+        console.log( unique(strings) ); // Hare, Krishna, :-O
+    </script>
+</body>
+</html>
