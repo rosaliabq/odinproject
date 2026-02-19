@@ -128,3 +128,32 @@ p.form-label{
 input{
     box-shadow: 5px 5px;
 }
+
+.error-msg {
+  display: none;
+  color: darkred;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+
+.error-msgPwd {
+  display: none;
+  color: darkred;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.error-msgConf {
+  display: none;
+  color: darkred;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.error-msgFN {
+  display: none;
+  color: darkred;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}

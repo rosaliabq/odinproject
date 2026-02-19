@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up!</title>
     <link rel="stylesheet" href="style.css">
+    <script src="form.js" defer></script>
 </head>
 <body>
     <div class="page">
@@ -14,6 +15,7 @@
                     <div class="logo-name">KIKI's delivery service</div>
             </div>
         </div>
+        <form id="createAccount" novalidate>
         <div class="form-side">
             <div class="flex-right">
                 <div class="intro-text">
@@ -24,12 +26,16 @@
                         <div class="column1">
                             <p class="form-label">FIRST NAME</p>
                             <input type="text" id="firstName">
+                            <div class="error-msgFN" id="firstNameError">Please enter first name.</div>
 
                             <p class="form-label">EMAIL</p>
                             <input type="text" id="email">
+                            <div class="error-msg" id="emailError">Please enter a valid email.</div>
 
                             <p class="form-label">PASSWORD</p>
                             <input type="password" id="password">
+                            <div class="error-msgPwd" id="pwdError">Please enter a password.</div>
+
                         </div>
                         <div class="column2">
                             <p class="form-label">LAST NAME</p>
@@ -40,16 +46,18 @@
 
                             <p class="form-label">CONFIRM PASSWORD</p>
                             <input type="password" id="passwordConf">
+                            <div class="error-msgConf" id="confirmError">Please enter a confirmation password.</div>
                         </div>
                     </div>
                 </div>
                 <div class="send-button">
-                    <button class="sendBtn">Create Account</button>
+                    <button type="submit" class="sendBtn" id="sendBtn">Create Account</button>
                 </div>
                 <div class="bottom-text">
                     <a class="common-text">Already have an account? </a> <u class="login-text"> Log in</u>
                 </div>
         </div>
+        </form>
     </div>
 </body>
 </html>
